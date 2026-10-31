@@ -1,0 +1,3 @@
+# Normalise line endings so Windows/macOS/Linux contributors produce clean diffs
+* text=auto eol=lf
+*.{png,jpg,jpeg,gif,webp,avif,ico,woff,woff2,pdf} binary
