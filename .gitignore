@@ -65,3 +65,6 @@ uploads/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Local deployment notes
+deploy.md

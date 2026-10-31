@@ -126,13 +126,14 @@ npm run dev            # http://localhost:4000
 
 ## 🚢 Deployment
 
-Deployed on **Vercel** as a serverless function via [vercel.json](vercel.json).
+Deployed on **Render** as a Node web service (build `npm ci`, start `npm start`, health check `/`). It can also run on Vercel as a serverless function via [vercel.json](vercel.json).
 
 Production checklist:
 
 - `NODE_ENV=production` (hides internal error details, disables localhost CORS)
 - Strong, distinct `JWT_TOKEN_SECRET` and `ADMIN_JWT_SECRET`
-- `FRONTEND_URL` / `ADMIN_URL` set to the real deployed origins
+- `FRONTEND_URL` / `ADMIN_URL` set to the real deployed origins, and `BACKEND_URL` to this API's public URL
+- MongoDB Atlas network access allows the host's IPs (`0.0.0.0/0` on Render)
 - `RAZORPAY_WEBHOOK_SECRET` configured if webhooks are used
 
 ---
